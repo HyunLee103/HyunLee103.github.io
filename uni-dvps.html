@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Unified Model for Depth-Aware Video Panoptic Segmentation.">
+  <meta name="keywords" content="Semantic Scene Understanding, Visual Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uni-DVPS: Unified Model for Depth-Aware Video Panoptic Segmentation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/uni-dvps/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/uni-dvps/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/uni-dvps/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/uni-dvps/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/uni-dvps/css/uni-dvps.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/uni-dvps/js/fontawesome.all.min.js"></script>
+  <script src="./assets/uni-dvps/js/bulma-carousel.min.js"></script>
+  <script src="./assets/uni-dvps/js/bulma-slider.min.js"></script>
+  <script src="./assets/uni-dvps/js/index.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMSVGPC040"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CMSVGPC040');
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Uni-DVPS: Unified Model for Depth-Aware Video Panoptic Segmentation</h1>
+          <h5 class="title is-5">
+            <span>RA-L 2024</span> <br>
+            <span style="font-style: italic; font-size: 18px; color: gray;">Presented in IROS 2024 (Oral)</span>
+          </h5>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jiyeon-k1m.github.io/">Kim Ji-Yeon</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://ami.postech.ac.kr/members/oh-hyun-bin">Oh Hyun-Bin</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://ami.postech.ac.kr/members/kwon-byung-ki">Kwon Byung-Ki</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://mcahny.github.io/">Dahun Kim</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              Yongjin Kwon<sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a><sup>1,4</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1 </sup>POSTECH,</span>
+            <span class="author-block"><sup>2 </sup>Google DeepMind,</span>
+            <span class="author-block"><sup>3 </sup>ETRI,</span>
+            <span class="author-block"><sup>4 </sup>Institute for Convergence Research and Education in Advanced Technology, Yonsei University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://ieeexplore.ieee.org/document/10517661"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/postech-ami/Uni-DVPS"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./assets/uni-dvps/image/teaser.png">
+      <h2 class="subtitle has-text-centered">
+        Given input frames, Uni-DVPS predicts both panoptic segmentation and depth estimation results.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+              We present <strong>Uni-DVPS</strong>, a unified model for Depth-aware Video Panoptic Segmentation (DVPS) that jointly tackles distinct vision tasks, i.e., video panoptic segmentation, monocular depth estimation, and object tracking. In contrast to the prior works that adopt diverged decoder networks tailored for each task, we propose an architecture with a unified Transformer decoder network.
+            </p> 
+            <p>
+              We design a single Transformer decoder network for multi-task learning to increase shared operations to facilitate the synergies between tasks and exhibit high efficiency. We also observe that our unified query learns instance-aware representation guided by multi-task supervision, which encourages query-based tracking and obviates the need for training extra tracking module.</p>
+            <p>
+              We validate our architectural design choices with experiments on Cityscapes-DVPS and SemKITTI-DVPS datasets. The performances of all tasks are jointly improved, and we achieve state-of-the-art results on DVPQ metric for both datasets. 
+            </p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section> 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Uni-DVPS -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Uni-DVPS Architecture</h2>
+        <div class="content has-text-justified">
+          <img src="./assets/uni-dvps/image/architecture.png">
+        </div>
+      </div>
+    </div>
+    <!-- Uni-DVPS -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Depth-aware Video Panoptic Segmentation Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <img id ="steve" src="./assets/uni-dvps/image/qual1.png" height="100%">
+          </div>
+          <div class="item item-chair-tp">
+            <img id ="chair-tp" src="./assets/uni-dvps/image/qual2.png" height="100%">
+          </div>
+          <div class="item item-shiba">
+            <img id ="shiba" src="./assets/uni-dvps/image/qual3.png" height="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Inverse Projection -->
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">3D Panoptic Segmentation Result</h2>
+        <video id="inverse-proj" autoplay controls muted loop playsinline height="100%">
+          <source src="./assets/uni-dvps/video/inverse-proj.mp4" type="video/mp4">
+      </video>
+      </div>
+    </div>
+    <!-- Inverse Projection -->
+
+    <!-- <div class="columns is-centered"> -->
+      <!-- Attention map Visualization
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-3">Attention Map</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <img src="./static/images/uni-dvps/attn.png">
+        </div>
+      </div>
+      Attention map Visualization -->
+
+      <!-- Attention map Visualization 
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-3">Occlusion Scenarios</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <img src="./static/images/uni-dvps/occlusion.png">
+        </div>
+      </div>
+      Attention map Visualization -->
+  <!-- </div> -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="colum is-full-width">
+        <h2 class="title is-3">Citation</h2>
+        <pre><code>@article{jiyeon2024unidvps,
+  title={Uni-DVPS: Unified Model for Depth-Aware Video Panoptic Segmentation},
+  author={Ji-Yeon, Kim and Hyun-Bin, Oh and Byung-Ki, Kwon and Kim, Dahun and Kwon, Yongjin and Oh, Tae-Hyun},
+  journal={IEEE Robotics and Automation Letters},
+  year={2024},
+  publisher={IEEE}}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered"> -->
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    <!-- </div> -->
+
+    <!-- Acknowledgment -->
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-8">
+        <div class="content">
+          <h2 class="title is-3">Acknowledgment</h2>
+          <p>
+            This work was supported by Institute of Information & Communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No. 2020-0-00004, Development of Previsional Intelligence based on Long-term Visual Memory Network) and Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) (No.2022-0-00290, Visual Intelligence for Space-Time Understanding and Generation based on Multi-layered Visual Common Sense).
+          </p>
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website, we just ask that you link back to the <a href="https://github.com/nerfies/nerfies.github.io">original page</a> in the footer.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Acknowledgment -->
+  </div>
+</footer>
+
+</body>
+</html>
