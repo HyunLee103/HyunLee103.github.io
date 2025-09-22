@@ -11,19 +11,23 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/home/css/home.css">
 
-  <!-- (NEW) Light-bold + publications typography tweaks -->
+  <!-- Typography tweaks -->
   <style>
-    /* 전체적으로 볼드가 너무 두꺼운 느낌을 600으로 낮춤 */
+    /* 전체 볼드 톤은 600으로 유지(이전 요청) */
     b, strong, h1, h2, h3, h4, h5, h6 { font-weight: 600; }
 
-    /* 소개 단락 가독성 */
-    .profile-text { font-size: 1rem; line-height: 1.7; }
+    /* 소개 단락: 가독성 + 소개 문단 내 볼드 사용 안함 */
+    .profile-text { font-size: 1rem; line-height: 1.7; font-weight: 400; }
 
-    /* Publications: 제목/메타 분리해서 크기 대비 주기 */
+    /* Publications: 제목/메타/링크 대비 */
     .pub-title { font-size: 1.02rem; font-weight: 600; line-height: 1.5; }
     .pub-meta  { font-size: 0.94rem; color: #555; }
     .pub-links { font-size: 0.92rem; }
-    .pub + .pub { margin-top: 0.75rem; }       /* 항목 간격 살짝 촘촘하게 */
+    .pub + .pub { margin-top: 0.45rem; } /* (1) 간격 좁힘 */
+
+    /* (2) 학회만 다른 글꼴 */
+    .pub-venue { font-family: Georgia, "Times New Roman", serif; font-variant: small-caps; letter-spacing: .2px; }
+
     .section { margin-top: 2rem; font-weight: 600; }
   </style>
 
@@ -59,7 +63,7 @@
             </div>
           </div>
 
-          <!-- ====== 소개 영역 (개선됨) ====== -->
+          <!-- ====== 소개 영역 (수정됨) ====== -->
           <div class="col-md-8">
             <h3 style="margin: 0; font-weight: 600;">Lee Hyun</h3>
             <small class="text-muted"> hyunlee@postech.ac.kr </small>
@@ -69,15 +73,10 @@
               I received an M.S. in EE from POSTECH advised by Prof. <a href="https://ami.postech.ac.kr/members/tae-hyun-oh">Tae-Hyun Oh</a>.
             </p>
 
-            <!-- 사용자가 제공한 문장 + 톤 정리 -->
-            <p class="profile-text text-justify mb-2">
-              My primary research focuses on <b>generative models with multimodal LLM</b>, spanning areas such as <b>music generation</b>, <b>video reasoning</b>, and <b>speech-to-3D talking-head generation</b>.
-              Recently, I’ve been expanding toward <b>LLM agents for materials discovery</b>, bridging LLMs with scientific innovation.
-            </p>
-
-            <!-- seungjuhan.me 톤처럼 현재 관심사를 한 줄로 강조 -->
+            <!-- (3)(4) 두 번째 문단에 자연스럽게 연결 + 볼드 제거 -->
             <p class="profile-text text-justify mb-0">
-              These days, I’m especially interested in <b>reasoning-centric LLMs</b>, <b>multimodal alignment</b>, and <b>physics/chemistry-aware data & training loops</b> for scientific discovery.
+              My primary research focuses on generative models with multimodal LLM, spanning areas such as music generation, video reasoning, and speech-to-3D talking-head generation.
+              Recently, I have been expanding my expertise toward LLM agents for materials discovery, focusing on LLM post-training and on how to build a reasoning trace from the materials design space to the target property space—and vice versa.
             </p>
           </div>
         </div>
@@ -86,13 +85,13 @@
           <div class="col-sm-12" style="padding: 0;">
             <h4 class="mt-2 section">Publications</h4>
 
-            <!-- 이미지 없이, 제목/메타/링크에 클래스 부여 (모든 항목 동일 패턴) -->
+            <!-- 이미지 없이, 제목/메타/링크에 클래스 부여 + venue만 별도 span -->
 
             <!-- New preprint -->
             <div class="row pub">
               <div class="col-sm-12 pub-text">
                 <div class="pub-title">Aligning Reasoning LLMs for Materials Discovery with Physics-aware Rejection Sampling</div>
-                <div class="pub-meta"><strong>Lee Hyun</strong>, Sohee Yoon, Jinwoo Park, Sue In Chae, Seongeon Park, Jooyeon Ahn, Yebin Jung, Youjung Chung, Hogeun Chang, Myeonginn Kang, Jina Kim, Ho-Gyeong Kim, Myeonghun Jeong &nbsp;|&nbsp; <span>Preprint</span> 2025</div>
+                <div class="pub-meta">Lee Hyun, Sohee Yoon, Jinwoo Park, Sue In Chae, Seongeon Park, Jooyeon Ahn, Yebin Jung, Youjung Chung, Hogeun Chang, Myeonginn Kang, Jina Kim, Ho-Gyeong Kim, Myeonghun Jeong &nbsp;|&nbsp; <span class="pub-venue">Preprint</span> 2025</div>
                 <div class="pub-links">[<a href="https://arxiv.org/pdf/2509.00768" target="_blank">Paper</a>]</div>
               </div>
             </div>
@@ -100,7 +99,7 @@
             <div class="row pub">
               <div class="col-sm-12 pub-text">
                 <div class="pub-title">VLM’s Eye Examination: Instruct and Inspect Visual Competency of Vision Language Models</div>
-                <div class="pub-meta">Nam Hyeon-Woo, Moon Ye-Bin, Wonseok Choi, <strong>Lee Hyun</strong>, Tae-Hyun Oh &nbsp;|&nbsp; Transactions on Machine Learning Research (TMLR) 2025</div>
+                <div class="pub-meta">Nam Hyeon-Woo, Moon Ye-Bin, Wonseok Choi, Lee Hyun, Tae-Hyun Oh &nbsp;|&nbsp; <span class="pub-venue">Transactions on Machine Learning Research (TMLR)</span> 2025</div>
                 <div class="pub-links">[<a href="https://arxiv.org/pdf/2409.14759" target="_blank">Paper</a>]</div>
               </div> 
             </div> 
@@ -108,7 +107,7 @@
             <div class="row pub">
               <div class="col-sm-12 pub-text">
                 <div class="pub-title">A Large-Scale 3D Face Mesh Video Dataset Via Neural Re-Parameterized Optimization</div>
-                <div class="pub-meta">Kim Youwang, <strong>Lee Hyun*</strong>, Kim Sung-Bin*, Suekyeong Nam, Janghoon Joo, Tae-Hyun Oh &nbsp;|&nbsp; ICLR 2025 (Invited from TMLR)</div>
+                <div class="pub-meta">Kim Youwang, Lee Hyun*, Kim Sung-Bin*, Suekyeong Nam, Janghoon Joo, Tae-Hyun Oh &nbsp;|&nbsp; <span class="pub-venue">ICLR</span> 2025 (Invited from TMLR)</div>
                 <div class="pub-links"><span class="badge badge-secondary">3DMV workshop @ CVPR 2023</span><br>
                   [<a href="https://openreview.net/pdf?id=zVDMh6JvWc" target="_blank">Paper</a> / <a href="https://lnkd.in/gtXZxnVr" target="_blank">Project Page</a>]
                 </div>
@@ -118,7 +117,7 @@
             <div class="row pub">
               <div class="col-sm-12 pub-text">
                 <div class="pub-title">SMILE: Multimodal Dataset for Understanding Laughter in Video with Language Models</div>
-                <div class="pub-meta"><strong>Lee Hyun*</strong>, Kim Sung-Bin*, Seungju Han, Youngjae Yu, Tae-Hyun Oh &nbsp;|&nbsp; NAACL 2024</div>
+                <div class="pub-meta">Lee Hyun*, Kim Sung-Bin*, Seungju Han, Youngjae Yu, Tae-Hyun Oh &nbsp;|&nbsp; <span class="pub-venue">NAACL</span> 2024</div>
                 <div class="pub-links">[<a href="https://arxiv.org/pdf/2312.09818.pdf" target="_blank">Paper</a> / <a href="https://github.com/postech-ami/SMILE-Dataset" target="_blank">Dataset</a>]</div>
               </div> 
             </div> 
@@ -126,7 +125,7 @@
             <div class="row pub">
               <div class="col-sm-12 pub-text">
                 <div class="pub-title">LaughTalk: Expressing 3D Talking Head Generation with Laughter</div>
-                <div class="pub-meta">Kim Sung-Bin, <strong>Lee Hyun</strong>, Dahye Hong, Suekyeong Nam, Janghoon Ju, Tae-Hyun Oh &nbsp;|&nbsp; WACV 2024</div>
+                <div class="pub-meta">Kim Sung-Bin, Lee Hyun, Dahye Hong, Suekyeong Nam, Janghoon Ju, Tae-Hyun Oh &nbsp;|&nbsp; <span class="pub-venue">WACV</span> 2024</div>
                 <div class="pub-links">[<a href="https://arxiv.org/pdf/2311.00994" target="_blank">Paper</a> / <a href="https://laughtalk.github.io/" target="_blank">Project Page</a>]</div>
               </div> 
             </div> 
@@ -134,7 +133,7 @@
             <div class="row pub">
               <div class="col-sm-12 pub-text">
                 <div class="pub-title">Multimodal Laughter Reasoning with Textual Audio-Visual Representation</div>
-                <div class="pub-meta"><strong>Lee Hyun</strong>, Kim Sung-Bin, Suengju Han, Youngjae Yu, Tae-Hyun Oh &nbsp;|&nbsp; AV4D workshop @ ICCV 2023</div>
+                <div class="pub-meta">Lee Hyun, Kim Sung-Bin, Suengju Han, Youngjae Yu, Tae-Hyun Oh &nbsp;|&nbsp; <span class="pub-venue">AV4D workshop @ ICCV</span> 2023</div>
                 <div class="pub-links">[<a href="https://av4d.org/papers/iccv23/p15.pdf" target="_blank">Paper</a>]</div>
               </div> 
             </div> 
@@ -142,7 +141,7 @@
             <div class="row pub">
               <div class="col-sm-12 pub-text">
                 <div class="pub-title">ComMU: Dataset for Combinatorial Music Generation</div>
-                <div class="pub-meta"><strong>Lee Hyun</strong>, Teahyun Kim, Hyolim Kang, Minjoo Ki, Hyeonchan Hwang,.., SeonJoo Kim &nbsp;|&nbsp; NeurIPS 2022</div>
+                <div class="pub-meta">Lee Hyun, Teahyun Kim, Hyolim Kang, Minjoo Ki, Hyeonchan Hwang,.., SeonJoo Kim &nbsp;|&nbsp; <span class="pub-venue">NeurIPS</span> 2022</div>
                 <div class="pub-links">[<a href="https://arxiv.org/pdf/2211.09385.pdf" target="_blank">Paper</a> / <a href="https://pozalabs.github.io/ComMU/" target="_blank">Project Page</a>]</div>
               </div> 
             </div> 
@@ -174,7 +173,7 @@
 
   <!-- Optional JavaScript -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    integrity="sha384-KJ3o2DKtIkv3YIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -184,4 +183,5 @@
     crossorigin="anonymous"></script>
 </body>
 </html>
+
 
