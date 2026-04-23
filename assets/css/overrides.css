@@ -72,6 +72,16 @@
   margin-top: 0.35rem;
 }
 
+.publications ol.bibliography li .title {
+  display: block;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.1rem;
+  scrollbar-width: thin;
+}
+
 .publications ol.bibliography li .hidden p {
   margin: 0.75rem 0 0;
 }
