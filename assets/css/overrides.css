@@ -1,0 +1,110 @@
+.profile {
+  text-align: center;
+}
+
+.profile figure {
+  margin: 0 auto 1.25rem;
+}
+
+.profile img {
+  width: 82%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 24%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix p {
+  line-height: 1.7;
+}
+
+.social {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.social .contact-icons {
+  font-size: 2.2rem;
+}
+
+.social .contact-icons a {
+  margin-right: 0.85rem;
+}
+
+.social .contact-note {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.news .table,
+.experience .table,
+.services .table {
+  margin-bottom: 0;
+}
+
+.table-borderless .news-date-column {
+  width: 8.25rem;
+  white-space: nowrap;
+}
+
+.table-borderless td,
+.table-borderless th {
+  vertical-align: top;
+}
+
+.compact-list {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.compact-list li {
+  margin-bottom: 0.3rem;
+}
+
+.publications ol.bibliography li .links {
+  margin-top: 0.35rem;
+}
+
+.publications ol.bibliography li .hidden p {
+  margin: 0.75rem 0 0;
+}
+
+.post .post-header {
+  margin-bottom: 1.5rem;
+}
+
+footer.sticky-bottom .container {
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  .profile {
+    float: none !important;
+    margin-bottom: 1.5rem;
+  }
+
+  .publications ol.bibliography li .col-sm-3 figure {
+    max-width: 280px;
+    margin: 0 auto 0.85rem;
+  }
+
+  .publications ol.bibliography li .col-sm-8 {
+    margin-top: 0.5rem;
+  }
+
+  .social {
+    text-align: center;
+  }
+
+  .social .contact-icons a {
+    margin-left: 0.35rem;
+    margin-right: 0.35rem;
+  }
+
+  .table-borderless .news-date-column {
+    width: 5.75rem;
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Materials Discovery</title>
+  <desc id="desc">Abstract thumbnail for the materials discovery reasoning LLM paper.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef8f6"/>
+      <stop offset="100%" stop-color="#f6f7ff"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1b6781"/>
+      <stop offset="100%" stop-color="#57b894"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="32" fill="url(#bg)"/>
+  <text x="86" y="104" font-family="Roboto, Arial, sans-serif" font-size="56" font-weight="700" fill="#15353f">Materials Discovery</text>
+  <text x="88" y="146" font-family="Roboto, Arial, sans-serif" font-size="26" fill="#35535f">Physics-aware rejection sampling for reasoning LLMs</text>
+  <rect x="88" y="208" width="190" height="190" rx="26" fill="#ffffff" stroke="#cce4dd" stroke-width="8"/>
+  <rect x="344" y="208" width="190" height="190" rx="26" fill="#ffffff" stroke="#d9e4f3" stroke-width="8"/>
+  <rect x="600" y="208" width="272" height="190" rx="26" fill="#ffffff" stroke="#dcead9" stroke-width="8"/>
+  <path d="M278 303h54" stroke="url(#beam)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M534 303h54" stroke="url(#beam)" stroke-width="14" stroke-linecap="round"/>
+  <text x="183" y="270" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" font-weight="700" fill="#1b6781">Reasoning</text>
+  <text x="183" y="312" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#35535f">Candidate traces</text>
+  <text x="439" y="270" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" font-weight="700" fill="#1b6781">Physics Filter</text>
+  <text x="439" y="312" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#35535f">Reject inconsistent</text>
+  <text x="439" y="344" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#35535f">scientific outputs</text>
+  <text x="736" y="268" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" font-weight="700" fill="#1b6781">Aligned Model</text>
+  <text x="736" y="310" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#35535f">More reliable materials</text>
+  <text x="736" y="342" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#35535f">design reasoning</text>
+  <rect x="707" y="432" width="165" height="52" rx="26" fill="url(#beam)"/>
+  <text x="789" y="466" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">NeurIPS 2025</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">SMILE-Next</title>
+  <desc id="desc">Abstract thumbnail for the SMILE-Next paper.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7f4ff"/>
+      <stop offset="100%" stop-color="#edf7ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9468"/>
+      <stop offset="100%" stop-color="#ff6f91"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="32" fill="url(#bg)"/>
+  <circle cx="170" cy="184" r="96" fill="#ffffff" stroke="#1b6781" stroke-width="16"/>
+  <circle cx="135" cy="165" r="16" fill="#1b6781"/>
+  <circle cx="205" cy="165" r="16" fill="#1b6781"/>
+  <path d="M122 212c25 36 80 36 105 0" fill="none" stroke="url(#accent)" stroke-width="16" stroke-linecap="round"/>
+  <rect x="312" y="104" width="530" height="120" rx="24" fill="#ffffff" stroke="#d8e7ef" stroke-width="8"/>
+  <rect x="312" y="260" width="530" height="176" rx="24" fill="#ffffff" stroke="#d8e7ef" stroke-width="8"/>
+  <text x="348" y="160" font-family="Roboto, Arial, sans-serif" font-size="54" font-weight="700" fill="#152c34">SMILE-Next</text>
+  <text x="348" y="208" font-family="Roboto, Arial, sans-serif" font-size="26" fill="#35535f">Teaching LLMs to detect and reason about laughter</text>
+  <text x="348" y="316" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700" fill="#1b6781">Multimodal cues</text>
+  <text x="348" y="356" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#35535f">Video, audio, and language signals are aligned</text>
+  <text x="348" y="394" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#35535f">to improve laughter understanding and reasoning.</text>
+  <rect x="698" y="334" width="108" height="52" rx="26" fill="url(#accent)"/>
+  <text x="752" y="368" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">ACL 2026</text>
+</svg>
