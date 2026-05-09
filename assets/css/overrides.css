@@ -75,11 +75,8 @@
 .publications ol.bibliography li .title {
   display: block;
   font-weight: bolder;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-bottom: 0.1rem;
-  scrollbar-width: thin;
+  white-space: normal;
+  overflow: visible;
 }
 
 .publications ol.bibliography li .hidden p {
