@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">SciMem</title>
+  <desc id="desc">Abstract thumbnail for the SciMem paper on scientific reasoning with structured memory for materials design.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef8fb"/>
+      <stop offset="100%" stop-color="#fff7ef"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1b6781"/>
+      <stop offset="100%" stop-color="#f08b38"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="32" fill="url(#bg)"/>
+
+  <rect x="72" y="72" width="816" height="124" rx="28" fill="#ffffff" stroke="#dbeaf0" stroke-width="8"/>
+  <text x="110" y="138" font-family="Roboto, Arial, sans-serif" font-size="62" font-weight="700" fill="#163946">SciMem</text>
+  <text x="110" y="178" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#425f69">Scientific reasoning with structured memory for materials design</text>
+
+  <rect x="72" y="236" width="250" height="228" rx="28" fill="#ffffff" stroke="#d8e9ee" stroke-width="8"/>
+  <rect x="356" y="236" width="250" height="228" rx="28" fill="#ffffff" stroke="#e6e6f4" stroke-width="8"/>
+  <rect x="640" y="236" width="248" height="228" rx="28" fill="#ffffff" stroke="#f0e3d5" stroke-width="8"/>
+
+  <text x="197" y="286" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700" fill="#1b6781">Structured Memory</text>
+  <rect x="120" y="314" width="150" height="24" rx="12" fill="#d8edf4"/>
+  <rect x="120" y="350" width="120" height="24" rx="12" fill="#f2e6d6"/>
+  <rect x="120" y="386" width="170" height="24" rx="12" fill="#dfe7f9"/>
+  <rect x="120" y="422" width="136" height="24" rx="12" fill="#d7efe5"/>
+
+  <path d="M322 350h34" stroke="url(#accent)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M606 350h34" stroke="url(#accent)" stroke-width="14" stroke-linecap="round"/>
+
+  <text x="481" y="286" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700" fill="#1b6781">Scientific Reasoning</text>
+  <circle cx="430" cy="344" r="18" fill="#1b6781" opacity="0.94"/>
+  <circle cx="482" cy="326" r="18" fill="#f08b38" opacity="0.94"/>
+  <circle cx="532" cy="362" r="18" fill="#57b894" opacity="0.94"/>
+  <circle cx="470" cy="392" r="18" fill="#5d7ce2" opacity="0.94"/>
+  <path d="M430 344l52-18 50 36-62 30-40-48z" fill="none" stroke="#36535f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="481" y="435" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#425f69">Traceable multi-step synthesis</text>
+
+  <text x="764" y="286" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="28" font-weight="700" fill="#1b6781">Materials Design</text>
+  <polygon points="764,318 796,338 796,376 764,396 732,376 732,338" fill="#f9c98f" stroke="#d67b27" stroke-width="8"/>
+  <polygon points="720,348 744,362 744,390 720,404 696,390 696,362" fill="#d9e7fb" stroke="#4d6fd8" stroke-width="8"/>
+  <polygon points="808,348 832,362 832,390 808,404 784,390 784,362" fill="#d8f1e6" stroke="#2c9b72" stroke-width="8"/>
+  <text x="764" y="435" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="#425f69">Memory-guided candidate selection</text>
+
+  <rect x="722" y="90" width="166" height="50" rx="25" fill="url(#accent)"/>
+  <text x="805" y="123" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="21" font-weight="700" fill="#ffffff">ICML 2026</text>
+</svg>
